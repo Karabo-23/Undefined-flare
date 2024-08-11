@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<style>
+    
+    *{
+margin: 0;
+padding: 0;
+      
+    }
+    body{
+background: linear-gradient(79deg,#42445A,#1D1F34,#0F1127);
+  
+    }
+    header{
+      background: linear-gradient(79deg,#737693,#1D1F34,#0F1127);
+     border-bottom: 4px solid #343549;
+     border-top: 4px solid #343549;
+     box-shadow: 2px 4px 8px #42445A;
+     
+    }
+    footer {
+      grid-area: ;
+      text-align: center;
+      height: auto;
+      
+      box-shadow: 0 0 9px grey;
+      position:fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+              .ftNav{
+          width:100%;
+          background-color:white;
+          display:flex;
+          height: 20%;
+         
+          
+          }
+          .item{
+          height:50px;
+          width:100%;
+         
+          display:flex;
+          align-items:center;
+          justify-content:center;
+
+          }
+          .icon{
+          
+          height: 100px;
+          width:50%;
+          padding: 5%;
+      
+          transition:1s;
+          z-index:1;
+          
+          }
+                    
+             .icon-card i {
+                   font-size: 48px;
+                   color: #282B4B;
+                   margin-bottom: 10px;
+                
+                   background-color: rgba(255, 255, 255, 0.9);
+                   box-shadow: 0 2px 3px #2C2E3E;
+                   border-radius: 30%;
+                   transition: 0.9s;
+                     
+                  
+                    }
+                    .icon-card:hover{
+                       border: 3px solid ;
+                       box-shadow: inset 0px 0px   2px ;
+                       border-radius: 15%;
+                    }
+                    
+          .name{
+          color:gray;
+          font-size:16px;
+          font-weight:900;
+          text-align:center;
+          text-transform:uppercase;
+          transition:opacity 8s;
+          position:absolute;
+          opacity:0;
+          visibility:hidden;
+          }
+          .item:hover > .icon{
+            color:#25273D;
+          transform:translateY(-20%) rotateY(360deg);
+          
+          }
+          .item:hover > .name{
+          transform:translateY(0%);
+          opacity:1;
+          
+          visibility:visible;
+          z-index: 2;
+          margin-top:5px;
+          } 
+          
+          .profileImg {
+      
+            width: 65px;
+            
+            height: 65px; 
+            
+            border-radius: 50%;
+            border:  0.5px solid #fff;
+            box-shadow: 1px 1px 8px #000;
+          }
+          .profileName{
+            color:white;
+            font-weight:500;
+            
+          }
+          /* Notice shit*/
+          .noticeDiv{
+            
+      
+
+            height:120px;
+            width:80%;
+            
+            margin: 10%;
+            text-align:center;
+            font-size:2em;
+            background-color: rgba(255, 255, 255, 0.09);
+
+            border-radius:12px;
+            
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            border:solid #42445A;
+            display: flex;
+            justify-content: center;
+            
+            
+          }
+    
+              .noticeImg {
+                margin-top: 15px;
+                
+                width: 65px;
+                height: 65px;
+                border-radius: 100%;
+                border: 2px solid #fff;
+                box-shadow: 1px 1px 8px #000;
+              }
+    .noticeNav{
+      font-size: 9px;
+      
+    }
+    .noticeButton{
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      border-radius:  9px;
+      width:100px;
+      height:30px;
+      background:#050827;
+      font-style: 7px;
+      color: white;
+    }
+    
+    /* semi upper body */
+    
+    .suDiv{
+      height: auto;
+      width: auto;
+        box-shadow: 1px 1px 9px white;
+       background:white;
+    }
+     
+     
+         .suImg {
+          
+           margin-left: 14%;
+           width: 10%;;
+           padding: 7%;
+           border-radius: 100%;
+           border: 2px solid #fff;
+           box-shadow: 1px 1px 8px #000;
+         }
+    
+    /*individual class notice boards*/
+    
+    .icDiv{
+         width: 100%;
+         box-shadow: 2px 2px 12px black;
+         background: white;
+         height:  100%;
+      
+     padding-bottom: 100%;
+    }
+    
+    
+        .icButton {
+          
+          float: left;
+          height: 90px;
+          width: 30%;
+          margin:    15px;
+          padding: 5%;
+          text-align: center;
+          font-size: 12px;
+          background-color: rgba(255, 255, 255, 0.9);
+          
+          border-radius: 12px;
+          font-weight: 900;
+           box-shadow: 0px 0px 8px #B4B4BE;
+          border: 2px solid rgba(255, 255, 255, 0.9);
+          border-left: 2px solid rgba(255, 255, 255, 9);
+          border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+    
+    
+        }
+   .icButton:hover{
+      transform: translateY(-15px);
+     box-shadow:2px 2px 9px #B4B4BE;
+      color:black;
+      
+   }
+        .icImg{
+           width:40px;
+           height: 40px;
+           border: 1px solid gold;
+           border-radius: 9px;
+           transition: 0.6s;
+           z-index: 1;
+        
+        }
+           .settings-container {
+              max-width: 800px;
+              margin: 2em auto;
+              display: none;
+              padding: 1em;
+              background: white;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           }
+       
+           
+       
+           h2 {
+              border-bottom: 2px solid #2c3e50;
+              padding-bottom: 0.5em;
+              margin-bottom: 1em;
+           }
+           a{
+              text-decoration: none;
+              color:white;
+              font-weight: 800;
+              
+           }
+
+           button {
+              padding: 1.45px;
+              background-color: #2c3e50;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+           }
+       
+           button:hover {
+              background-color: #34495e;
+           }
+           .lightbox {
+     display: table; 
+     position: fixed;
+     top: -100%; 
+     left: 0;
+     width: 100%;
+     height: 100%;
+    background: #24252FC2;
+   
+     background-size:100% 10%;
+     z-index:3;
+     border-bottom: 2px;
+     transition: 2s;
+     }
+     .lightbox:target {
+     top: 0; 
+     }
+     .lightbox-content {
+     display: table-cell;
+     vertical-align: middle;u
+     text-align: center;
+     }
+     .lbProfilePic{
+        width:100%;
+       
+        height: 100%;
+     }
+      .icon-card {
+         background: white;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         margin: 15px;
+      
+         text-align: center;
+         width: 120px;
+      }
+     
+
+  </style>
+  
+  
+</head>
+<header>
+  <!--Tab to edit-->
+   
+  <a href="#openProfile" >
+  <img src=""  class="profileImg" id="profile-picture">
+  </a>
+  <a class="profileName" id="user-info">
+   
+
+   kekana karabo
+</a >  
+  
+  
+  
+    
+   <div class="lightbox" id="openProfile">
+      
+   <img src=""  class="lbProfilePic" id="profileP2">
+      
+      
+</div>
+ 
+  
+</header>
+
+<body>
+  <div class="noticeDiv">
+    
+
+    <span class="noticeNav">
+      
+            <img src="https://firebasestorage.googleapis.com/v0/b/rare-5f47e.appspot.com/o/1722686659551.jpg?alt=media&token=baecfd79-f36a-431e-b78c-aac4ca5eeb22" alt="" class="noticeImg">
+     PRESS TO VIEW LATEST ANNOUNCEMENTS
+         <button class="noticeButton">
+       NOTICE
+         </button>
+    </span>
+
+  </div>
+  
+  <br>
+  
+  <div class="suDiv">
+<img src="" alt="" class="suImg" >    
+<img src="" alt="" class="suImg" style="border: 2px solid gold" >    
+<img src="" alt="" class="suImg" >    
+
+    
+  </div>
+
+     <div class="icDiv">
+       
+       <div class="icButton">
+           <div class="item" >
+  <div class="icon-card">
+                   <i class="fas fa-book" style="font-size:40px"></i>
+              
+                </div>
+           </div>
+           <br>
+           <p>
+          Grade 12 study material
+           </p>
+          </div>
+       
+         <div class="icButton">
+             <div class="item" >
+                <div class="icon-card">
+           <i class="fas fa-school" style="font-size: 30px;"></i>
+                         <i class="fas fa-info-circle" style="font-size: 30px"></i>
+                         </div>
+            </div>
+            <br>
+            <p>
+            About school
+            </p>
+         </div>
+         
+           <div class="icButton">
+              <div class="item">
+        <div class="icon-card">
+           <!-- Using Font Awesome icons for teacher and evaluation -->
+           <i class="fas fa-chalkboard-teacher" style="font-size: 30px;"></i>
+           <i class="fas fa-check-circle" style="font-size: 30px"></i>
+          
+        </div>
+              </div>
+              <br>
+              <p>
+              Teacher evaluater
+              </p>
+              </div>
+           
+             <div class="icButton">
+                <div class="item">
+  <div class="icon-card">
+                          <i class="fas fa-calculator" style="font-size: 30px;"></i>
+                          <i class="fas fa-flask" style="font-size: 30px"></i>
+                       </div>
+                  </div>
+                <br>
+                <p>
+                school subjects
+                </p>
+                </div>
+       
+       
+                       </div>
+  
+  
+  
+  
+</body>
+
+
+
+<footer>
+  <main class="settings-container" id="mainSet">
+     <section class="profile-section">
+            <h2>Profile Information</h2>
+            <div class="profile-info">
+               <img id="profile-picture" src=" " >
+               <div>
+                  <label for="display-name">Display Name:</label>
+                  <p id="display-name"></p>
+     
+                  <label for="email">Email:</label>
+                  <p id="user-info">kekanaKarabo@example.com</p>
+               </div>
+            </div>
+         </section>
+         <p id="pin">
+            
+            <!--Tab to edit-->
+         </p>
+  </main>
+<div class="extras">
+<div class="bottom" >
+               <div class="container">
+               <div class="ftNav">
+
+             
+            
+               <div class="item" onclick="document.getElementById('mainSet').style.display='block';"style="margin-left:6%">
+               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"/></svg>
+               <span class="name" >profile</span>
+               </div>
+                              <div class="item" style="margin-left:3%" >
+               <svg class="icon"  viewBox="0 0 24 24" fill="currentColor"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22L12 3Z"/></svg>
+               <span class="name">Home</span>
+               </div>
+               <div class="item" style="margin-left:6%">
+               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z"/></svg>
+               <span class="name"  onclick="openSettings()
+               ">Settings</span>
+               </div>
+
+</footer>
+
+
+</html>
+
+
+  <script type="module">
+     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js';
+     import { getAuth, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js';
+
+     const firebaseConfig = {
+        apiKey: "AIzaSyBSMvHpZ0_VkqWjJ94UMa6vqEhFiqrsIWM",
+        authDomain: "rare-5f47e.firebaseapp.com",
+        projectId: "rare-5f47e",
+        storageBucket: "rare-5f47e.appspot.com",
+        messagingSenderId: "811727087812",
+        appId: "1:811727087812:web:d362e68abf6c26acf24191",
+        measurementId: "G-DE59771G7Q"
+     };
+
+     const app = initializeApp(firebaseConfig);
+     const auth = getAuth(app);
+
+     const userInfo = document.getElementById("user-info");
+     const profilePicture = document.getElementById("profile-picture");
+     const logoutButton = document.getElementById("logout-button");
+
+     onAuthStateChanged(auth, (user) => {
+        if (user) {
+           userInfo.innerText = ` ${user.email}`;
+           if (user.photoURL) {
+              profilePicture.src = user.photoURL;
+              document.getElementById('profileP2').src=user.photoURL;
+
+           } else {
+              profilePicture.src = 'default-profile-picture-url'; 
+              wind.location.href='undefined undefined flare logo.html';
+           }
+        } 
+     });
+   
+         
+         
+         
+  </script>
+  
+  
+  
